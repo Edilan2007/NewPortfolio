@@ -1,0 +1,68 @@
+// Colors
+$primary-color: #cddc39;
+$secondary-color: #3a433e;
+$dot-color: #ffffff;
+// Dimensions
+$dot-size: 2px;
+$dot-space: 22px;
+
+@mixin background {
+  background: linear-gradient(
+        90deg,
+        $primary-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($primary-color ($dot-space - $dot-size), transparent 1%)
+      center,
+    $dot-color;
+}
+@mixin easeOut {
+  transition: all 0.6s ease-out;
+}
+// Bounce Effect
+@keyframes bounce {
+  0%,
+  10%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+// Media Queries Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

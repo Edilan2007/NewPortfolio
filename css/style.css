@@ -1,0 +1,259 @@
+@keyframes bounce {
+  0%,
+  10%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.6s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 4px;
+    margin: 0 0 5px 0;
+    background-color: #3a433e;
+    transition: all 0.6s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px); }
+
+.menu {
+  position: relative;
+  top: 0;
+  width: 100%;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav {
+    display: flex;
+    flex-grow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 150px;
+    margin-top: 0;
+    padding-right: 40px;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    background: #3a433e;
+    opacity: 0.8;
+    transition: all 0.6s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-link:hover {
+    color: #3a433e;
+    transition: all 0.6s ease-out; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: linear-gradient(90deg, #cddc39 20px, transparent 1%) center, linear-gradient(#cddc39 20px, transparent 1%) center, #ffffff;
+  background-size: 22px 22px;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: #c6d626; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px; }
+  a.nav-link {
+    position: relative;
+    padding: 10px 10px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1; }
+    a.nav-link:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 2px solid #3a433e;
+      border-bottom: 2px solid #3a433e;
+      transform: scaleY(2);
+      opacity: 0;
+      transition: 0.3s; }
+    a.nav-link:after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      transform: scale(0);
+      opacity: 0;
+      transition: 0.3s;
+      z-index: -1; }
+    a.nav-link:hover {
+      color: #3a433e; }
+      a.nav-link:hover:before {
+        transform: scaleY(1);
+        opacity: 1; }
+      a.nav-link:hover:after {
+        transform: scaleY(1);
+        opacity: 1; }
+
+header {
+  position: relative;
+  z-index: 3;
+  width: 100%; }
+
+.text-secondary {
+  color: #3a433e; }
+
+main {
+  padding: 0 4rem 4rem 4rem; }
+  main .pic {
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+    main .pic img {
+      border: 3px solid rgba(158, 139, 85, 0.3);
+      border-radius: 50%;
+      width: 180px;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+      main .pic img:hover {
+        cursor: pointer;
+        animation-name: bounce; }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #3a433e;
+        transition: all 0.6s ease-out; }
+  mainhome {
+    overflow: hidden; }
+    mainhome h1 {
+      margin-top: 20vh; }
+
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px solid #fff; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #3a433e;
+      transition: all 0.6s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  font-size: 15px; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #3a433e;
+    color: set-text-color(#3a433e); }
+
+.btn-dark {
+  background: #393e0b;
+  color: #fff; }
+
+.btn-light {
+  background: #393e0b;
+  color: #fff; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #b2c022;
+  color: set-text-color(#cddc39);
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 5rem; }
+    main .sm-heading {
+      font-size: 1.1rem; }
+
+  ul.menu-nav {
+    float: none;
+    width: 100%;
+    min-height: 150px;
+    font-size: 20px; }
+    ul.menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+
+  .menu-nav {
+    height: 25vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 0; }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+@media screen and (max-width: 500px) {
+  main.home h1 {
+    margin-top: 0; }
+    main.home h1 .lg-heading {
+      font-size: 3rem; }
+    main.home h1 .sm-heading {
+      font-size: 0.8rem; }
+
+  a {
+    font-size: 12px; }
+
+  h2 {
+    font-size: 1rem; }
+
+  .projects {
+    grid-template-columns: repeat(1, 1fr); } }
+
+/*# sourceMappingURL=style.css.map */
