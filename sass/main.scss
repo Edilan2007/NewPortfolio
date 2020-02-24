@@ -149,7 +149,7 @@ main {
 
   &:hover {
     background: $secondary-color;
-    color: set-text-color($secondary-color);
+    color: $secondary-color;
   }
 }
 
@@ -170,7 +170,7 @@ main {
   text-align: center;
   padding: 1rem;
   background: darken($color: $primary-color, $amount: 10);
-  color: set-text-color($primary-color);
+  color: $secondary-color;
   height: 60px;
 }
 @import "components/mobile";
