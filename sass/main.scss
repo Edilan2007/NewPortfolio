@@ -120,7 +120,7 @@ main {
   &home {
     overflow: hidden;
     h1 {
-      margin-top: 20vh;
+      margin-top: 19vh;
     }
   }
 }
@@ -128,10 +128,7 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 1.2rem;
-  grid-template-areas:
-    "bioimage bio bio bio"
-    "job1 job2 job3 job4";
+  grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
 
   img {
@@ -142,11 +139,6 @@ main {
       border-color: $secondary-color;
       @include easeOut;
     }
-  }
-  .bio {
-    grid-area: bio;
-    font-size: 1.3rem;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 .btn {
@@ -172,6 +164,36 @@ main {
   @extend .btn;
   background: darken($color: $primary-color, $amount: 40);
   color: #fff;
+}
+// About me
+.aboutme {
+  display: grid;
+  grid-gap: 1.5rem;
+
+  .projects {
+    grid-template-areas:
+      "bioimage bio bio bio"
+      "job1 job2 job3 job4";
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+  .job {
+    background: lighten($color: $primary-color, $amount: 5);
+    padding: 0.5rem;
+    border-bottom: 5px solid $secondary-color;
+  }
 }
 
 //footer
