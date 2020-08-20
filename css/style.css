@@ -169,7 +169,7 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.2rem;
   grid-template-areas: "bioimage bio bio bio" "job1 job2 job3 job4";
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
@@ -214,7 +214,6 @@ main {
     grid-template-columns: repeat(4, 1fr); } }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-areas: "bioimage" "bio" "bio" "job1" "job2" "job3" "job4";
     grid-template-columns: repeat(3, 1fr); } }
 @media screen and (max-width: 768px) {
   main {
@@ -243,7 +242,6 @@ main {
     padding-right: 0; }
 
   .projects {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "job4";
     grid-template-columns: repeat(2, 1fr); } }
 @media screen and (max-width: 500px) {
   main.home h1 {

@@ -9,12 +9,7 @@
 //Desktops & Labtops
 @include mediaLg {
   .projects {
-    grid-template-areas:
-      "bioimage" "bio" "bio"
-      "job1" "job2" "job3"
-      "job4";
     grid-template-columns: repeat(3, 1fr);
-    //grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -51,12 +46,7 @@
     padding-right: 0;
   }
   .projects {
-    grid-template-areas:
-      "bioimage" "bio"
-      "job1" "job2"
-      "job3" "job4";
     grid-template-columns: repeat(2, 1fr);
-    //grid-template-columns: repeat(2, 1fr);
   }
 }
 // Smartphones
