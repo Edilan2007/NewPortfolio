@@ -178,6 +178,9 @@ main {
       opacity: 0.5;
       border-color: #3a433e;
       transition: all 0.6s ease-out; }
+  .projects .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
