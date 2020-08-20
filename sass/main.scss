@@ -129,6 +129,9 @@ main {
 .projects {
   display: grid;
   grid-gap: 1rem;
+  grid-template-areas:
+    "bioimage bio bio bio"
+    "job1 job2 job3 job4";
   grid-template-columns: repeat(3, 1fr);
 
   img {
