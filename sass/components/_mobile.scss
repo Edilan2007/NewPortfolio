@@ -53,6 +53,9 @@
     padding-left: 5px;
     padding-right: 0;
   }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .aboutme {
     .projects {
       grid-template-areas:
