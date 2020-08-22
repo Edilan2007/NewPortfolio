@@ -192,9 +192,9 @@ main {
     &:hover {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
-      color: st-text-color($secondary-color);
+      color: #fff;
       span {
-        color: set-text-color($secondary-color);
+        color: #fff;
       }
     }
   }

@@ -214,9 +214,9 @@ main {
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #3a433e;
-      color: st-text-color(#3a433e); }
+      color: #fff; }
       .boxes div:hover span {
-        color: set-text-color(#3a433e); }
+        color: #fff; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
